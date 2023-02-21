@@ -54,7 +54,6 @@ public interface Instrument {
         instrument[0] = guitar;
         instrument[1] = drums;
         instrument[2] = trampet;
-
         for (Instrument i: instrument) {
           i.play();
         }

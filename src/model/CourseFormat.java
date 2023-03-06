@@ -1,18 +1,32 @@
 package model;
 
-public class CourseFormat {
-    private String format;
+import enums.Format;
+import enums.FormatOldVersion;
+public class CourseFormat extends BaseEntity {
+    private Format format;
     private int durationInWeek;
-    private boolean online;
+    private boolean isOnline;
     private int lessonDuration;
     private int lessonCountPerWeek;
-    private long id;
 
-    public String getFormat() {
+    @Override
+    public String toString() {
+        return "CourseFormat{" +
+                "id=" + id +
+                ", format=" + format.getA() +
+                ", durationInWeek=" + durationInWeek +
+                ", isOnline=" + isOnline +
+                ", lessonDuration=" + lessonDuration +
+                ", lessonCountPerWeek=" + lessonCountPerWeek +
+                ", dateCreated=" + getDateCreated() +
+                '}';
+    }
+
+    public Format getFormat() {
         return format;
     }
 
-    public void setFormat(String format) {
+    public void setFormat(Format format) {
         this.format = format;
     }
 
@@ -25,11 +39,11 @@ public class CourseFormat {
     }
 
     public boolean isOnline() {
-        return online;
+        return isOnline;
     }
 
     public void setOnline(boolean online) {
-        this.online = online;
+        isOnline = online;
     }
 
     public int getLessonDuration() {
@@ -47,25 +61,4 @@ public class CourseFormat {
     public void setLessonCountPerWeek(int lessonCountPerWeek) {
         this.lessonCountPerWeek = lessonCountPerWeek;
     }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    @Override
-    public String toString() {
-        return "CourseFormat{" +
-                "format='" + format + '\'' +
-                ", durationInWeek=" + durationInWeek +
-                ", online=" + online +
-                ", lessonDuration=" + lessonDuration +
-                ", lessonCountPerWeek=" + lessonCountPerWeek +
-                ", id=" + id +
-                '}';
-    }
 }
-

@@ -1,10 +1,10 @@
 package model;
 
 public abstract class User extends BaseEntity {
-    private String name;
-    private String surname;
-    private String phoneNumber;
-    private String email;
+    protected String name;
+    protected String surname;
+    protected String phoneNumber;
+    protected String email;
 
     public String getName() {
         return name;

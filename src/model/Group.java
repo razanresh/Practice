@@ -1,9 +1,11 @@
 package model;
 
-public class Group {
+import java.time.LocalTime;
+
+public class Group  extends BaseEntity{
     private String name;
-    private double price;
-    private CourseFormat courseFormat;
+    private String  room;
+    private LocalTime startTime;
 
     public String getName() {
         return name;
@@ -13,19 +15,19 @@ public class Group {
         this.name = name;
     }
 
-    public double getPrice() {
-        return price;
+    public String getRoom() {
+        return room;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setRoom(String room) {
+        this.room = room;
     }
 
-    public CourseFormat getCourseFormat() {
-        return courseFormat;
+    public LocalTime getStartTime() {
+        return startTime;
     }
 
-    public void setCourseFormat(CourseFormat courseFormat) {
-        this.courseFormat = courseFormat;
+    public void setStartTime(LocalTime startTime) {
+        this.startTime = startTime;
     }
 }
